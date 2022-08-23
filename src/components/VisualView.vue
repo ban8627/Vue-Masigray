@@ -6,36 +6,16 @@
           <a href="#" class="sw-visual-1"></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="#" class="sw-visual-1"></a>
+          <a href="#" class="sw-visual-2"></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="#" class="sw-visual-1"></a>
+          <a href="#" class="sw-visual-3"></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="#" class="sw-visual-1"></a>
+          <a href="#" class="sw-visual-4"></a>
         </SwiperSlide>
-      </SwiperSlide>
+      </Swiper>
 
-      <div class="swiper-container sw-visual">
-        <!-- 슬라이드 내용 -->
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="#" class="sw-visual-1"></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="sw-visual-2"></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="sw-visual-3"></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="sw-visual-4"></a>
-          </div>
-        </div>
-        <!-- 슬라이드 좌우버튼 -->
-        <button class="sw-visual-prev"></button>
-        <button class="sw-visual-next"></button>
-      </div>
     </section>
 </template>
 
