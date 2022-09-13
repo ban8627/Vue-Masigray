@@ -32,13 +32,13 @@
 
 <script>
   import $ from 'jquery'
-  import {onMounted,computed} from 'vue'
+  import {onUpdated,computed} from 'vue'
   import {useStore} from 'vuex'
   export default {
     setup() {
       const store = useStore();
       const menudata = computed(() => store.getters.getMenuData);
-    onMounted(() => {
+    onUpdated(() => {
       // 메인 메뉴 기능
       let header = $('.header');
       let header_top = $('.header-top');

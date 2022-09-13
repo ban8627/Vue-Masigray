@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <ModalView/>
     <GoTop />
     <MobileMenu/>
     <FixView />
@@ -15,6 +16,7 @@
 
 <script>
 import GoTop from '@/components/GoTop.vue';
+import ModalView from '@/components/ModalView.vue';
 import FixView from '@/components/FixView.vue';
 import MobileMenu from '@/components/MobileMenu.vue';
 import HeaderView from '@/components/HeaderView.vue';
@@ -33,6 +35,7 @@ import { useStore } from 'vuex'
 export default {
   name: 'App',
   components: {
+    ModalView,
     GoTop,
     MobileMenu,
     FixView,

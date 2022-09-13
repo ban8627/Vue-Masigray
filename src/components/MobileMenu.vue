@@ -30,27 +30,28 @@
 
 <script>
   import $ from 'jquery'
-  import {onMounted,computed} from 'vue'
+  import {computed, onUpdated} from 'vue'
   import {useStore} from 'vuex'
   export default {
     setup() {
       const store = useStore();
       const menudata = computed(() => store.getters.getMenuData);
-      onMounted(() => {
+
+      console.log("setUp () 메소드 ==", menudata.value)
+      onUpdated(() => {
+        // console.log("onMounted () 메소드 ===",menudata.value)
         // 모바일 메뉴 기능
         // 1. 펼침메뉴 기능
         let mb_mainmenu = $('.mb-menu > li > a');
         let mb_submenu = $('.mb-submenu');
-
         $.each(mb_mainmenu, function (index) {
+          // 이벤트 바인딩
           $(this).click(function (event) {
             // href 막기
             event.preventDefault();
-
             // 클릭하면 현재 포커스 클래스가 있는지 검토
             let temp = $(this).hasClass('mb-menu-focus');
             if (temp == true) {
-
               // 포커스 적용해제
               $(this).removeClass('mb-menu-focus');
               // 아이콘 리버스 제거
@@ -77,7 +78,6 @@
         let mb_dim = $('.mb-dim');
         let mb_close = $('.mb-close');
         let mb_wrap = $('.mb-wrap');
-
         mb_bt.click(function (event) {
           event.preventDefault();
           mb_dim.show();

@@ -7,119 +7,7 @@ import axios from 'axios';
 export default createStore({
   // state: 데이터 모아서 관리하는 객체
   state: {
-    menuData: [{
-        mainstr: '마시그래이',
-        mainlink: '#',
-        sub: [{
-            substr: '회사소개',
-            sublink: '#'
-          },
-          {
-            substr: '연혁',
-            sublink: '#'
-          },
-          {
-            substr: 'CEO인사말',
-            sublink: '#'
-          },
-          {
-            substr: 'BI / 비전',
-            sublink: '#'
-          },
-          {
-            substr: '오시는길',
-            sublink: '#'
-          },
-        ]
-      },
-      {
-        mainstr: '메뉴',
-        mainlink: '#',
-        sub: [{
-            substr: '신메뉴',
-            sublink: '#'
-          },
-          {
-            substr: '커피',
-            sublink: '#'
-          },
-          {
-            substr: '음료',
-            sublink: '#'
-          },
-          {
-            substr: '디저트',
-            sublink: '#'
-          },
-          {
-            substr: 'MD상품',
-            sublink: '#'
-          }
-        ]
-      },
-      {
-        mainstr: '프랜차이즈',
-        mainlink: '#',
-        sub: [{
-            substr: '가맹안내',
-            sublink: '#'
-          },
-          {
-            substr: '가맹절차',
-            sublink: '#'
-          },
-          {
-            substr: '매장인테리어',
-            sublink: '#'
-          },
-          {
-            substr: '커피 아카데미',
-            sublink: '#'
-          },
-          {
-            substr: '가맹상담신청',
-            sublink: '#'
-          }
-        ]
-      },
-      {
-        mainstr: '매장안내',
-        mainlink: '#',
-        sub: [{
-          substr: '매장안내',
-          sublink: '#'
-        }]
-      },
-      {
-        mainstr: '공지사항',
-        mainlink: '#',
-        sub: [{
-            substr: '공지사항',
-            sublink: '#'
-          },
-          {
-            substr: '이벤트',
-            sublink: '#'
-          }
-        ]
-      },
-      {
-        mainstr: '고객의소리',
-        mainlink: '#',
-        sub: [{
-            substr: 'FAQ',
-            sublink: '#'
-          },
-          {
-            substr: 'Q&amp;A',
-            sublink: '#'
-          },
-          {
-            substr: '케이터링',
-            sublink: '#'
-          }
-        ]
-      }
+    menuData: [
     ],
     storeData: [{
         link: '#',
@@ -150,7 +38,7 @@ export default createStore({
       commit
     }) {
     // 외부에 있는 메뉴데이터.json 파일을 불러온다.
-      axios.get('/data/menu.json')
+      axios.get('./data/menu.json')
         .then(response => {
           // 서버 또는 파일이 결과 발생하면
           // console.log('axios 사용',response.data)
@@ -173,7 +61,7 @@ export default createStore({
   // getters: state 출력(컴포넌트) 전달 computed 처리 자리
   getters: {
     getMenuData(state) {
-      // console.log('step4 : getters',)
+      // console.log('step4 : getters',state.menuData)
       return state.menuData
     },
     getStoreData(state) {
